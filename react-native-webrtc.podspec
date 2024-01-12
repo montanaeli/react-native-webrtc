@@ -20,4 +20,9 @@ Pod::Spec.new do |s|
   s.framework           = 'AudioToolbox','AVFoundation', 'CoreAudio', 'CoreGraphics', 'CoreVideo', 'GLKit', 'VideoToolbox'
   s.dependency          'React-Core'
   # s.dependency          'JitsiWebRTC', '~> 111.0.0'
+
+  # Note: Update to consume local WebRTC.xcframework
+  # maintained as a local pod in path -> https://github.com/millicast/streaming-sdk-react-native-getting-started/tree/main/ios/WebRTC
+  # TODO: Consider moving libWebRTC and WebRTC pod into this repo or a separate repo for better reusability
+  s.dependency          'WebRTC'
 end
